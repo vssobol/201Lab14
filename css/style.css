@@ -1,1 +1,88 @@
 /* TODO: Make it awesome */
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+body > header{
+    border-radius: 5px;
+    background-color: #999999;
+    padding: .8em;
+    margin-top: 1.5em;
+}
+
+body > header > h1{
+    float: left;
+    font-weight: bold;
+    padding: .3em;
+    padding-left: 8em;
+    margin-right: 49.5%;
+}
+
+body > header > nav > ul > li{
+    transition-duration: .25s;
+    display: inline-block;
+    border: thin solid black;
+    border-radius: 1em;
+    background-color: gray;
+    padding: .3em;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+body > header > nav > ul > li:first-child{
+    margin-right: .5em;
+}
+
+body > header > nav > ul > li:hover{
+    background-color: silver;
+}
+
+main{
+    clear: both;
+}
+
+main > section > div > header > h1{
+    float: left;
+    position: static;
+    width: 67.5%;
+    border: 2px solid #999999;
+    border-radius: 5px;
+    background-color: #CCCCCC;
+    font-size: 22px;
+    font-weight: bold;
+    padding: .75em;
+    margin-top: 1em;
+}
+
+main > section > div > div > ol > li{
+    width: 20%;
+    border: 2px solid #999999;
+    padding: 1.6em;
+    text-align: justify;
+    margin-top: -2px;
+    margin-left: 73%;
+}
+
+section > div > div > form{
+    position: absolute;
+    top: 11em;
+    width: 35.5%;
+}
+
+section > div > div > form > fieldset > legend{
+    font-size: 20px;
+    margin-left: .25em;
+    margin-bottom: .6em;
+}
+
+label select, label input{
+    width: 15%;
+    margin-right: 8%;
+}
+
+label span{
+    margin-right: .5em;
+}
