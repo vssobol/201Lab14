@@ -19,6 +19,7 @@ body > header > h1{
     padding: .3em;
     padding-left: 8em;
     margin-right: 49.5%;
+    opacity: .7;
 }
 
 body > header > nav > ul > li{
@@ -55,6 +56,7 @@ main > section > div > header > h1{
     font-weight: bold;
     padding: .75em;
     margin-top: 1em;
+    opacity: .8;
 }
 
 main > section > div > div > ol > li{
@@ -85,4 +87,25 @@ label select, label input{
 
 label span{
     margin-right: .5em;
+}
+
+#cartContents{
+    overflow-y: scroll; 
+    border: 2px solid #999999;
+    height: 30.5em;
+    width: 15.2em;
+    margin-top: -2px;
+    margin-left: 73%;
+}
+
+footer{
+    border-radius: 5px;
+    background-color: #999999;
+    text-align: right;
+    padding: .8em;
+}
+
+footer > p{
+    opacity: .25;
+    padding-right: 1.5em;
 }
