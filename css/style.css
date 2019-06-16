@@ -130,6 +130,7 @@ label span{
 }
 
 img{
+    border-radius: 3em;
     opacity: .4;
     margin: .5em;
     transition-duration: 1s;
