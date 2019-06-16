@@ -12,6 +12,10 @@ function populateForm() {
   //TODO: Add an <option> tag inside the form's select for each product
   var selectElement = document.getElementById('items');
   for (var i in Product.allProducts) {
+    var optionEl =document.createElement('option');
+    selectElement.appendChild(optionEl);
+    optionEl.textContent = Product.allProducts[i].name;
+    optionEl.value = Product.allProducts[i].name;
 
   }
 
@@ -22,30 +26,57 @@ function populateForm() {
 // so that it shows the # of items in the cart and a quick preview of the cart itself.
 function handleSubmit(event) {
 
+
   // TODO: Prevent the page from reloading
+  event.preventDefault();
+
 
   // Do all the things ...
-  addSelectedItemToCart();
+  addSelectedItemToCart(event);
   cart.saveToLocalStorage();
   updateCounter();
   updateCartPreview();
-
+  // document.getElementById('items').value='';
+  // document.getElementById('quantity').value='';
 }
 
 // TODO: Add the selected item and quantity to the cart
-function addSelectedItemToCart() {
+function addSelectedItemToCart(event) {
   // TODO: suss out the item picked from the select list
   // TODO: get the quantity
   // TODO: using those, add one item to the Cart
+  var selectedItemName = event.target.items.value; //not sure
+  var selecteditemQuantity = Number(event.target.quantity.value); //not sure
+  cart.addItem(selectedItemName,selecteditemQuantity);
+
 }
 
 // TODO: Update the cart count in the header nav with the number of items in the Cart
-function updateCounter() {}
+function updateCounter() {
+  var count =0;
+  for (var i=0;i<cart.items.length;i++){
+    count = count + cart.items[i].quantity;
+  }
+  var itemCount = document.getElementById('itemCount');
+  itemCount.textContent = count;
+
+
+}
 
 // TODO: As you add items into the cart, show them (item & quantity) in the cart preview div
 function updateCartPreview() {
   // TODO: Get the item and quantity from the form
   // TODO: Add a new element to the cartContents div with that information
+  var previewEl = document.getElementById('cartContents');
+  var ulEl = document.createElement('ul');
+  previewEl.appendChild(ulEl);
+  for (var i=0; i< cart.items.length; i++){
+    var liEl = document.createElement('li');
+    ulEl.appendChild(liEl);
+    liEl.textContent = 'Item name: ' + cart.items[i].product + ' Item Quantity: ' + cart.items[i].quantity;
+  }
+
+
 }
 
 // Set up the "submit" event listener on the form.
