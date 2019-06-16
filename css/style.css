@@ -13,6 +13,22 @@ body > header{
     margin-top: 1.5em;
 }
 
+#lili{
+    position: absolute;
+    top: -2.2em;
+    left: 24.2%;
+    opacity: 1;
+    width: 8%;
+}
+
+#lili:hover{
+    cursor: grab;
+}
+
+#lili:active{
+    cursor: grabbing;
+}
+
 body > header > h1{
     float: left;
     font-weight: bold;

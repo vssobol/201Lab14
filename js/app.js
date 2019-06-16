@@ -66,7 +66,6 @@ generateCatalog();
 
 
 /* Create new element with images and append to col-2 */
-
 var sectionEl = document.getElementsByClassName('col-1')[0];
 var divEl = document.createElement('div');
 divEl.setAttribute('id', "imageContainer");
@@ -80,3 +79,13 @@ for(var i = 0; i < allProducts.length; i++){
   divEl.appendChild(imgEl);
 }
 sectionEl.appendChild(divEl);
+
+/* Create new element for logo and append to header */
+var headerEl = document.getElementsByTagName('header')[0];
+console.log(headerEl);
+var imgEl = document.createElement('img');
+imgEl.setAttribute('id', 'lili');
+imgEl.setAttribute('src', 'img/logo.png');
+imgEl.setAttribute('alt', 'Cat Loaf');
+imgEl.setAttribute('title', 'Cat Loaf');
+headerEl.appendChild(imgEl);
