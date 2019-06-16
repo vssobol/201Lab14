@@ -68,6 +68,18 @@ main > section > div > div > ol > li{
     margin-left: 73%;
 }
 
+#itemCount{
+    position: absolute;
+    border: thin solid brown;
+    border-radius: 2em;
+    background-color: red;
+    color: white;
+    font-size: 10px;
+    font-weight: bolder;
+    padding: .2em;
+    margin-left: .5em;
+}
+
 section > div > div > form{
     position: absolute;
     top: 11em;
