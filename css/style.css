@@ -89,6 +89,19 @@ label span{
     margin-right: .5em;
 }
 
+#imageContainer{
+    position: absolute;
+    top: 17em;
+    height: 63.9%;
+    width: 36%;
+    overflow-y: scroll;
+    padding: .3em;
+}
+
+img{
+    margin: .5em;
+}
+
 #cartContents{
     overflow-y: scroll; 
     border: 2px solid #999999;
